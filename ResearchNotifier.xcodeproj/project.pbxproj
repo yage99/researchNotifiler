@@ -63,6 +63,7 @@
 		2F0F00C71FD5B78F00338399 = {
 			isa = PBXGroup;
 			children = (
+				2F0F00F61FD5CEB400338399 /* README.md */,
 				2F0F00D21FD5B78F00338399 /* ResearchNotifier */,
 				2F0F00E71FD5B78F00338399 /* ResearchNotifierTests */,
 				2F0F00D11FD5B78F00338399 /* Products */,
@@ -89,7 +90,6 @@
 				2F0F00DC1FD5B78F00338399 /* LaunchScreen.storyboard */,
 				2F0F00DF1FD5B78F00338399 /* Info.plist */,
 				2F0F00F41FD5C1B000338399 /* GlobalData.swift */,
-				2F0F00F61FD5CEB400338399 /* README.md */,
 			);
 			path = ResearchNotifier;
 			sourceTree = "<group>";
