@@ -39,6 +39,7 @@
 		2F0F00EA1FD5B78F00338399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F0F00F31FD5B7B700338399 /* ResearchNotifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResearchNotifier.entitlements; sourceTree = "<group>"; };
 		2F0F00F41FD5C1B000338399 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		2F0F00F61FD5CEB400338399 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 				2F0F00DC1FD5B78F00338399 /* LaunchScreen.storyboard */,
 				2F0F00DF1FD5B78F00338399 /* Info.plist */,
 				2F0F00F41FD5C1B000338399 /* GlobalData.swift */,
+				2F0F00F61FD5CEB400338399 /* README.md */,
 			);
 			path = ResearchNotifier;
 			sourceTree = "<group>";
