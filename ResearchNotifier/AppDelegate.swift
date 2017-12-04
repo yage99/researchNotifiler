@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,20 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        os_log("starting register remote notifications", type: .debug)
         UIApplication.shared.registerForRemoteNotifications()
         
         return true
     }
     
     func application(_ application:UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        os_log("remote register succeed", type: .debug)
         self.enableRemoteNotificationFeatures()
         self.forwardTokenToServer(token: deviceToken)
+        os_log("device token is %@", type: .info, deviceToken.base64EncodedString())
     }
     
     func application(_ application: UIApplication,
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
         // The token is not currently available.
-        print("Remote notification support is unavailable due to error: \(error.localizedDescription)")
+        os_log("Remote notification support is unavailable due to error: %@ ", type: .error, error.localizedDescription)
         self.disableRemoteNotificationFeatures()
     }
     
