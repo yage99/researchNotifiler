@@ -13,6 +13,7 @@
 		2F0F00DB1FD5B78F00338399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F00DA1FD5B78F00338399 /* Assets.xcassets */; };
 		2F0F00DE1FD5B78F00338399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F00DC1FD5B78F00338399 /* LaunchScreen.storyboard */; };
 		2F0F00E91FD5B78F00338399 /* ResearchNotifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F00E81FD5B78F00338399 /* ResearchNotifierTests.swift */; };
+		2F0F00F51FD5C1B000338399 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F00F41FD5C1B000338399 /* GlobalData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		2F0F00E41FD5B78F00338399 /* ResearchNotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResearchNotifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0F00E81FD5B78F00338399 /* ResearchNotifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchNotifierTests.swift; sourceTree = "<group>"; };
 		2F0F00EA1FD5B78F00338399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F0F00F31FD5B7B700338399 /* ResearchNotifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResearchNotifier.entitlements; sourceTree = "<group>"; };
+		2F0F00F41FD5C1B000338399 /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +80,14 @@
 		2F0F00D21FD5B78F00338399 /* ResearchNotifier */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F00F31FD5B7B700338399 /* ResearchNotifier.entitlements */,
 				2F0F00D31FD5B78F00338399 /* AppDelegate.swift */,
 				2F0F00D51FD5B78F00338399 /* ViewController.swift */,
 				2F0F00D71FD5B78F00338399 /* Main.storyboard */,
 				2F0F00DA1FD5B78F00338399 /* Assets.xcassets */,
 				2F0F00DC1FD5B78F00338399 /* LaunchScreen.storyboard */,
 				2F0F00DF1FD5B78F00338399 /* Info.plist */,
+				2F0F00F41FD5C1B000338399 /* GlobalData.swift */,
 			);
 			path = ResearchNotifier;
 			sourceTree = "<group>";
@@ -147,6 +152,11 @@
 					2F0F00CF1FD5B78F00338399 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2F0F00E31FD5B78F00338399 = {
 						CreatedOnToolsVersion = 9.1;
@@ -199,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0F00F51FD5C1B000338399 /* GlobalData.swift in Sources */,
 				2F0F00D61FD5B78F00338399 /* ViewController.swift in Sources */,
 				2F0F00D41FD5B78F00338399 /* AppDelegate.swift in Sources */,
 			);
@@ -353,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ResearchNotifier/ResearchNotifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GF2RJXH7ZA;
 				INFOPLIST_FILE = ResearchNotifier/Info.plist;
@@ -368,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ResearchNotifier/ResearchNotifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GF2RJXH7ZA;
 				INFOPLIST_FILE = ResearchNotifier/Info.plist;

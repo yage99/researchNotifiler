@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var deviceTokenLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        deviceTokenLabel.text = GlobalData.getInstance().deviceToken?.base64EncodedString()
     }
 
     override func didReceiveMemoryWarning() {

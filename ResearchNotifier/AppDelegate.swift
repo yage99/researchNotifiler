@@ -13,10 +13,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.shared.registerForRemoteNotifications()
+        
         return true
+    }
+    
+    func application(_ application:UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        self.enableRemoteNotificationFeatures()
+        self.forwardTokenToServer(token: deviceToken)
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // The token is not currently available.
+        print("Remote notification support is unavailable due to error: \(error.localizedDescription)")
+        self.disableRemoteNotificationFeatures()
+    }
+    
+    func enableRemoteNotificationFeatures() {
+        
+    }
+    
+    func disableRemoteNotificationFeatures() {
+        
+    }
+    
+    func forwardTokenToServer(token: Data) {
+        GlobalData.getInstance().deviceToken = token
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
